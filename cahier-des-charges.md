@@ -16,21 +16,50 @@ Pour garder un code propre et structuré sur des dizaines d'heures de dev, voici
 
 📁 retroforge/
 │
-├── 📄 index.html              <-- Hub central (sélection des modules de jeu)
-├── 📄 snake.html              <-- Interface d'exécution du jeu Snake
-├── 📄 bricks.html             <-- Interface d'exécution du Casse-Briques
-├── 📄 cahier-des-charges.md   <-- Ce document de planification
+├── 📄 index.html                  <-- Hub d'accueil responsive (Grille des 10 jeux)
+├── 📄 cahier-des-charges.md       <-- Ton plan de vol avec tes idées (vitesse adaptative, stats...)
+│
+├── 📁 games/                      <-- Les pages de tes 10 modules de jeu
+│   ├── 📄 snake.html
+│   ├── 📄 tetris.html
+│   ├── 📄 pong.html
+│   ├── 📄 demineur.html
+│   ├── 📄 pacman.html
+│   ├── 📄 bricks.html
+│   ├── 📄 space-invaders.html     <-- (Bonus jeu 7)
+│   ├── 📄 frogger.html            <-- (Bonus jeu 8)
+│   ├── 📄 flappy.html             <-- (Bonus jeu 9)
+│   └── 📄 asteroides.html         <-- (Bonus jeu 10)
 │
 ├── 📁 css/
-│   ├── 📄 global.css          <-- Style du Hub et de la console de configuration
-│   ├── 📄 snake.css           <-- Design de la grille et du serpent
-│   └── 📄 bricks.css          <-- Design de la raquette, de la balle et des briques
+│   ├── 📄 global.css              <-- Design du Hub + menu de config (PC & Mobile)
+│   ├── 📄 mobile-controls.css     <-- Interface de la manette virtuelle (D-Pad tactile)
+│   └── 📁 modules/                <-- Styles spécifiques aux écrans de chaque jeu
+│       ├── 📄 snake.css
+│       ├── 📄 tetris.css
+│       ├── 📄 pong.css
+│       ├── 📄 demineur.css
+│       ├── 📄 pacman.css
+│       ├── 📄 bricks.css
+│       ├── 📄 space-invaders.css
+│       ├── 📄 frogger.css
+│       ├── 📄 flappy.css
+│       └── 📄 asteroides.css
 │
 └── 📁 js/
-    ├── 📄 hub.js              <-- Logique de la modale de configuration et des scores
-    ├── 📄 snake.js            <-- Moteur de jeu, calculs de coordonnées du Snake
-    └── 📄 bricks.js           <-- Moteur physique et rebonds du Casse-Briques
-
+    ├── 📄 hub.js                  <-- Gestionnaire de la modale, thèmes et scores globaux
+    ├── 📄 touch-manager.js        <-- Émulateur des touches clavier (Z,Q,S,D) via écran tactile
+    └── 📁 engines/                <-- Les moteurs physiques et logiques de tes jeux
+        ├── 📄 snake.js
+        ├── 📄 tetris.js
+        ├── 📄 pong.js
+        ├── 📄 demineur.js
+        ├── 📄 pacman.js
+        ├── 📄 bricks.js
+        ├── 📄 space-invaders.js
+        ├── 📄 frogger.js
+        ├── 📄 flappy.js
+        └── 📄 asteroides.js
 ---
 
 ## 4. CAHIER DES CHARGES DES MODULES DE JEU (OBJECTIF : 10 JEUX)
