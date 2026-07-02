@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Snake Protocol — RetroForge</title>
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/mobile-controls.css">
+<link rel="stylesheet" href="../css/modules/snake.css">
+</head>
+<body class="crt-flicker">
+  <div class="crt-overlay"></div>
+
+  <div class="game-screen">
+    <div class="game-topbar">
+      <a class="back" href="../index.html">&larr; Retour au hall</a>
+      <span class="game-title">SNAKE PROTOCOL</span>
+      <span></span>
+    </div>
+
+    <div class="hud">
+      <span>SCORE : <b id="hudScore">0</b></span>
+      <span>RECORD : <b id="hudBest">0</b></span>
+      <span>MOYENNE : <b id="hudAvg">0</b></span>
+      <span>TEMPS : <b id="hudTime">0:00</b></span>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+      <div class="overlay-msg" id="overlay">
+        <h2 id="overlayTitle">SNAKE PROTOCOL</h2>
+        <p id="overlayMsg">Appuie sur une touche pour demarrer</p>
+      </div>
+    </div>
+
+    <div class="game-options">
+      <label><input type="checkbox" id="adaptiveSpeed" checked> Vitesse adaptative</label>
+      <span>Controles : ZQSD / WASD / Fleches</span>
+    </div>
+  </div>
+
+  <div class="touch-controls" id="touchControls">
+    <div class="dpad">
+      <button class="up" data-dir="up" aria-label="Haut">▲</button>
+      <button class="left" data-dir="left" aria-label="Gauche">◀</button>
+      <button class="right" data-dir="right" aria-label="Droite">▶</button>
+      <button class="down" data-dir="down" aria-label="Bas">▼</button>
+    </div>
+  </div>
+
+  <script src="../js/hub.js"></script>
+  <script>window.RETROFORGE_ASSET_BASE = "../assets/";</script>
+  <script src="../js/playlist.js"></script>
+  <script src="../js/engines/snake.js"></script>
+</body>
+</html>

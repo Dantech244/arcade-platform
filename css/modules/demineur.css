@@ -1,0 +1,71 @@
+.game-screen { max-width: 720px; margin: 0 auto; padding: 18px 20px 60px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.game-topbar { width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.game-topbar a.back { font-family: var(--font-mono); color: var(--text-muted); text-decoration: none; font-size: 14px; letter-spacing: 1px; }
+.game-topbar a.back:hover { color: var(--cyan); }
+.game-title { font-family: var(--font-display); font-size: 14px; letter-spacing: 1px; color: var(--text-main); text-shadow: 0 0 6px var(--cyan); }
+.hud { width: 100%; display: flex; flex-wrap: wrap; gap: 14px; font-family: var(--font-mono); font-size: 14px; color: var(--text-muted); justify-content: center; }
+.hud b { color: var(--cyan); font-weight: normal; }
+.game-options { width: 100%; max-width: 520px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; font-family: var(--font-mono); font-size: 13px; color: var(--text-muted); }
+.game-options label { display: flex; align-items: center; gap: 6px; }
+.game-options input[type=number] { width: 56px; background: var(--bg-screen); border: 1px solid #2a2340; color: var(--text-main); font-family: var(--font-mono); padding: 5px 6px; border-radius: 3px; }
+#mineGrid { display: grid; gap: 3px; background: #05040a; border: 1px solid var(--cyan-dim); padding: 5px; border-radius: 4px; box-shadow: 0 0 30px -8px var(--cyan-dim); touch-action: manipulation; }
+
+.mine-cell {
+  width: 26px; height: 26px; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: 13px; font-weight: bold;
+  border-radius: 3px; cursor: pointer; user-select: none;
+  background: linear-gradient(145deg, #2f2554, #1d1638);
+  border-top: 1px solid #5a4a8c;
+  border-left: 1px solid #5a4a8c;
+  border-right: 1px solid #0e0a1c;
+  border-bottom: 1px solid #0e0a1c;
+  color: var(--cyan);
+  transition: filter 0.1s ease;
+}
+.mine-cell:hover { filter: brightness(1.25); }
+
+.mine-cell.revealed {
+  cursor: default;
+  background: #0a0814;
+  border: 1px solid #000;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.85);
+  filter: none;
+}
+.mine-cell.revealed:hover { filter: none; }
+
+.mine-cell.flagged { color: var(--amber); }
+
+.mine-cell.mine { background: var(--magenta-dim); border-color: var(--magenta); color: #fff; }
+
+/* Code couleur classique par nombre de mines voisines, pour une lecture instantanee */
+.mine-cell.revealed[data-count="1"] { color: #2ee6d6; }
+.mine-cell.revealed[data-count="2"] { color: #4dff7a; }
+.mine-cell.revealed[data-count="3"] { color: #ff5e5e; }
+.mine-cell.revealed[data-count="4"] { color: #a06bff; }
+.mine-cell.revealed[data-count="5"] { color: #ffcf4d; }
+.mine-cell.revealed[data-count="6"] { color: #4dd9ff; }
+.mine-cell.revealed[data-count="7"] { color: #ffffff; }
+.mine-cell.revealed[data-count="8"] { color: #9a94b0; }
+.overlay-msg { position: absolute; inset: 0; background: rgba(7, 6, 13, 0.9); display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; border-radius: 4px; padding: 20px; }
+.overlay-msg.show { display: flex; }
+.overlay-msg h2 { font-family: var(--font-display); font-size: 18px; color: var(--magenta); text-shadow: 0 0 10px var(--magenta); margin: 0; }
+.overlay-msg p { font-family: var(--font-mono); color: var(--text-muted); margin: 0; max-width: 360px; }
+.canvas-wrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.btn-inline { font-family: var(--font-mono); font-size: 12px; padding: 6px 12px; border-radius: 3px; border: 1px solid var(--cyan-dim); background: transparent; color: var(--cyan); cursor: pointer; }
+.btn-inline:hover { background: var(--cyan-dim); color: var(--bg-void); }
+
+@media (max-width: 480px) {
+  .mine-cell { width: 24px; height: 24px; font-size: 12px; }
+}
+
+/* Responsive mobile : evite que le lecteur musical (fixed, en haut a droite)
+   ne chevauche le HUD ou la topbar sur petit ecran */
+@media (max-width: 560px) {
+  .game-screen { padding-top: 64px; }
+}

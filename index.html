@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>RetroForge — Salle d'arcade</title>
+<meta name="description" content="RetroForge : 10 classiques retro rejouables directement dans le navigateur.">
+<link rel="stylesheet" href="css/global.css">
+</head>
+<body class="crt-flicker">
+
+  <div id="boot-sequence" aria-hidden="true">
+    <p>RETROFORGE BIOS v1.0</p>
+    <p>MEM CHECK ......... OK</p>
+    <p>LOADING 10 CARTRIDGES</p>
+    <p>NEON CIRCUITS ..... OK</p>
+    <p>&gt; INSERT COIN</p>
+  </div>
+
+  <div class="crt-overlay"></div>
+
+  <button class="config-btn" id="configBtn" aria-haspopup="dialog" aria-controls="configModal" title="Reglages">⚙</button>
+
+  <header class="marquee">
+    <h1 class="marquee__title">RETRO<span>FORGE</span></h1>
+    <p class="marquee__sub">Salle d'arcade — 10 cabines, un seul navigateur</p>
+    <div class="marquee__bar"></div>
+  </header>
+
+  <section class="stats-strip" id="globalStats" aria-label="Statistiques globales">
+    <span>PARTIES JOUEES : <b id="statGames">0</b></span>
+    <span>TEMPS DE JEU CUMULE : <b id="statTime">0 min</b></span>
+    <span>CABINES PRETES : <b>10 / 10</b></span>
+  </section>
+
+  <main class="hall" id="gameHall" aria-label="Selection des jeux">
+
+    <a class="cab cab--ready" href="games/snake.html">
+      <span class="cab__plate">01</span>
+      <div class="cab__screen">🐍</div>
+      <div class="cab__name">SNAKE<br>PROTOCOL</div>
+      <span class="cab__tag">Solo · Vitesse adaptative</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+    <a class="cab cab--ready" href="games/tetris.html">
+      <span class="cab__plate">02</span>
+      <div class="cab__screen">🧱</div>
+      <div class="cab__name">TETRIS<br>MATRIX</div>
+      <span class="cab__tag">Solo · Fixe ou adaptatif</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+    <a class="cab cab--ready" href="games/pong.html">
+      <span class="cab__plate">03</span>
+      <div class="cab__screen">🏓</div>
+      <div class="cab__name">PONG<br>VECTOR</div>
+      <span class="cab__tag">Solo vs IA · 2 joueurs</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+    <a class="cab cab--ready" href="games/demineur.html">
+      <span class="cab__plate">04</span>
+      <div class="cab__screen">💣</div>
+      <div class="cab__name">CYBER<br>DEMINEUR</div>
+      <span class="cab__tag">Solo · Grille personnalisee</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+    <a class="cab cab--ready" href="games/pacman.html">
+      <span class="cab__plate">05</span>
+      <div class="cab__screen">👻</div>
+      <div class="cab__name">PACMAN<br>MAZE</div>
+      <span class="cab__tag">Solo · Fantomes evolutifs</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+    <a class="cab cab--ready" href="games/bricks.html">
+      <span class="cab__plate">06</span>
+      <div class="cab__screen">🧩</div>
+      <div class="cab__name">BRICK<br>BREAKER</div>
+      <span class="cab__tag">Solo · Briques renforcees</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+    <a class="cab cab--ready" href="games/space-invaders.html">
+      <span class="cab__plate">07</span>
+      <div class="cab__screen">👾</div>
+      <div class="cab__name">SPACE<br>INVADERS</div>
+      <span class="cab__tag">Solo · Vagues croissantes</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+    <a class="cab cab--ready" href="games/frogger.html">
+      <span class="cab__plate">08</span>
+      <div class="cab__screen">🐸</div>
+      <div class="cab__name">FROGGER<br>CROSSING</div>
+      <span class="cab__tag">Solo · Trafic dynamique</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+    <a class="cab cab--ready" href="games/flappy.html">
+      <span class="cab__plate">09</span>
+      <div class="cab__screen">🐦</div>
+      <div class="cab__name">FLAPPY<br>SIGNAL</div>
+      <span class="cab__tag">Solo · Tubes resserres</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+    <a class="cab cab--ready" href="games/asteroides.html">
+      <span class="cab__plate">10</span>
+      <div class="cab__screen">☄️</div>
+      <div class="cab__name">ASTEROIDES<br>DRIFT</div>
+      <span class="cab__tag">Solo · Champ dense</span>
+      <span class="cab__status">PRET</span>
+    </a>
+
+  </main>
+
+  <footer>RETROFORGE — HTML5 · CSS3 · JS Vanille — Hack Club 2026</footer>
+
+  <div class="modal-backdrop" id="configModal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h2 id="modalTitle">REGLAGES SYSTEME</h2>
+
+      <label for="themeSelect">Theme graphique</label>
+      <select id="themeSelect">
+        <option value="default">Cyberpunk Neon</option>
+        <option value="phosphor">Retro Vert Phosphore</option>
+        <option value="gameboy">Classic GameBoy</option>
+      </select>
+
+      <label for="controlsInfo">Controles</label>
+      <select id="controlsInfo" disabled>
+        <option>ZQSD / Fleches directionnelles</option>
+      </select>
+
+      <div class="modal__row">
+        <button class="btn btn--danger" id="resetScoresBtn">Effacer les scores</button>
+        <button class="btn" id="closeModalBtn">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/hub.js"></script>
+  <script>window.RETROFORGE_ASSET_BASE = "assets/";</script>
+  <script src="js/playlist.js"></script>
+</body>
+</html>

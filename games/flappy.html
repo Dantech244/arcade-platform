@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Flappy Signal — RetroForge</title>
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/modules/flappy.css">
+</head>
+<body class="crt-flicker">
+  <div class="crt-overlay"></div>
+  <div class="game-screen">
+    <div class="game-topbar">
+      <a class="back" href="../index.html">&larr; Retour au hall</a>
+      <span class="game-title">FLAPPY SIGNAL</span>
+      <span></span>
+    </div>
+    <div class="hud">
+      <span>SCORE : <b id="hudScore">0</b></span>
+      <span>RECORD : <b id="hudBest">0</b></span>
+      <span>MOYENNE : <b id="hudAvg">0</b></span>
+      <span>TEMPS : <b id="hudTime">0:00</b></span>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+      <div class="overlay-msg" id="overlay">
+        <h2 id="overlayTitle">FLAPPY SIGNAL</h2>
+        <p id="overlayMsg">Appuie, clique ou tape pour demarrer</p>
+      </div>
+    </div>
+    <div class="game-options">
+      <span>Controles : ESPACE / Z / clic / tap — les tubes se resserrent avec ton score</span>
+    </div>
+  </div>
+
+  <script src="../js/hub.js"></script>
+  <script>window.RETROFORGE_ASSET_BASE = "../assets/";</script>
+  <script src="../js/playlist.js"></script>
+  <script src="../js/engines/flappy.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Cyber Demineur — RetroForge</title>
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/modules/demineur.css">
+</head>
+<body class="crt-flicker">
+  <div class="crt-overlay"></div>
+  <div class="game-screen">
+    <div class="game-topbar">
+      <a class="back" href="../index.html">&larr; Retour au hall</a>
+      <span class="game-title">CYBER DEMINEUR</span>
+      <span></span>
+    </div>
+    <div class="hud">
+      <span>MINES RESTANTES : <b id="hudMinesLeft">12</b></span>
+      <span>RECORD : <b id="hudBest">0</b></span>
+      <span>MOYENNE : <b id="hudAvg">0</b></span>
+      <span>TEMPS : <b id="hudTime">0:00</b></span>
+    </div>
+    <div class="canvas-wrap">
+      <div id="mineGrid"></div>
+      <div class="overlay-msg" id="overlay">
+        <h2 id="overlayTitle">CYBER DEMINEUR</h2>
+        <p id="overlayMsg">Configure ta grille puis lance la partie</p>
+      </div>
+    </div>
+    <div class="game-options">
+      <label>Taille : <input type="number" id="gridSize" value="10" min="6" max="20"></label>
+      <label>Mines : <input type="number" id="mineCount" value="12" min="3" max="80"></label>
+      <button class="btn-inline" id="newGameBtn">Nouvelle partie</button>
+    </div>
+  </div>
+
+  <script src="../js/hub.js"></script>
+  <script>window.RETROFORGE_ASSET_BASE = "../assets/";</script>
+  <script src="../js/playlist.js"></script>
+  <script src="../js/engines/demineur.js"></script>
+</body>
+</html>

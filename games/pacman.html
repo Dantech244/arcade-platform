@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Pacman Maze — RetroForge</title>
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/mobile-controls.css">
+<link rel="stylesheet" href="../css/modules/pacman.css">
+</head>
+<body class="crt-flicker">
+  <div class="crt-overlay"></div>
+  <div class="game-screen">
+    <div class="game-topbar">
+      <a class="back" href="../index.html">&larr; Retour au hall</a>
+      <span class="game-title">PACMAN MAZE</span>
+      <span></span>
+    </div>
+    <div class="hud">
+      <span>SCORE : <b id="hudScore">0</b></span>
+      <span>VIES : <b id="hudLives">3</b></span>
+      <span>RECORD : <b id="hudBest">0</b></span>
+      <span>MOYENNE : <b id="hudAvg">0</b></span>
+      <span>TEMPS : <b id="hudTime">0:00</b></span>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+      <div class="overlay-msg" id="overlay">
+        <h2 id="overlayTitle">PACMAN MAZE</h2>
+        <p id="overlayMsg">Appuie sur une touche pour demarrer</p>
+      </div>
+    </div>
+    <div class="game-options">
+      <span>Controles : ZQSD / WASD / Fleches — les fantomes s'enhardissent avec ton score</span>
+    </div>
+  </div>
+
+  <div class="touch-controls" id="touchControls">
+    <div class="dpad">
+      <button class="up" data-dir="up" aria-label="Haut">▲</button>
+      <button class="left" data-dir="left" aria-label="Gauche">◀</button>
+      <button class="right" data-dir="right" aria-label="Droite">▶</button>
+      <button class="down" data-dir="down" aria-label="Bas">▼</button>
+    </div>
+  </div>
+
+  <script src="../js/hub.js"></script>
+  <script>window.RETROFORGE_ASSET_BASE = "../assets/";</script>
+  <script src="../js/playlist.js"></script>
+  <script src="../js/engines/pacman.js"></script>
+</body>
+</html>
