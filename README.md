@@ -11,64 +11,7 @@ Hub d'arcade rétro-futuriste — 10 jeux classiques réémulés en HTML5, CSS3 
 
 ---
 
-## 2. ARBORESCENCE DU PROJET
-
-📁 retroforge/
-│
-├── 📄 index.html                  <-- Hub d'accueil responsive (grille des 10 jeux)
-├── 📄 README.md                   <-- Ce fichier
-├── 📄 cahier-des-charges.md       <-- Plan de vol original (vitesse adaptative, stats...)
-│
-├── 📁 assets/
-│   └── 📁 music/                  <-- Playlist : music1.mp3, music2.mp3, ... (detection auto)
-│       └── 📄 README.txt
-│
-├── 📁 games/                      <-- Les 10 pages de jeu
-│   ├── 📄 snake.html
-│   ├── 📄 tetris.html
-│   ├── 📄 pong.html
-│   ├── 📄 demineur.html
-│   ├── 📄 pacman.html
-│   ├── 📄 bricks.html
-│   ├── 📄 space-invaders.html
-│   ├── 📄 frogger.html
-│   ├── 📄 flappy.html
-│   └── 📄 asteroides.html
-│
-├── 📁 css/
-│   ├── 📄 global.css              <-- Design tokens, hub, modale de config, lecteur musical
-│   ├── 📄 mobile-controls.css     <-- Interface de la manette virtuelle (D-Pad tactile)
-│   └── 📁 modules/                <-- Styles spécifiques à l'écran de chaque jeu
-│       ├── 📄 snake.css
-│       ├── 📄 tetris.css
-│       ├── 📄 pong.css
-│       ├── 📄 demineur.css
-│       ├── 📄 pacman.css
-│       ├── 📄 bricks.css
-│       ├── 📄 space-invaders.css
-│       ├── 📄 frogger.css
-│       ├── 📄 flappy.css
-│       └── 📄 asteroides.css
-│
-└── 📁 js/
-    ├── 📄 hub.js                  <-- Gestionnaire de la modale, thèmes et scores globaux
-    ├── 📄 touch-manager.js        <-- Émulateur des touches clavier (Z,Q,S,D) via écran tactile
-    ├── 📄 playlist.js             <-- Lecteur de playlist musicale aléatoire
-    └── 📁 engines/                <-- Moteurs physiques et logiques de chaque jeu
-        ├── 📄 snake.js
-        ├── 📄 tetris.js
-        ├── 📄 pong.js
-        ├── 📄 demineur.js
-        ├── 📄 pacman.js
-        ├── 📄 bricks.js
-        ├── 📄 space-invaders.js
-        ├── 📄 frogger.js
-        ├── 📄 flappy.js
-        └── 📄 asteroides.js
-
----
-
-## 3. FONCTIONNALITÉS STANDARDISÉES
+## 2. FONCTIONNALITÉS STANDARDISÉES
 
 Chaque jeu de la plateforme intègre :
 * **Contrôles universels :** Flèches directionnelles OU touches clavier (`Z, Q, S, D` / `W, A, S, D`), plus un D-Pad tactile sur mobile.
@@ -79,7 +22,7 @@ Chaque jeu de la plateforme intègre :
 
 ---
 
-## 4. LISTE DES 10 MODULES
+## 3. LISTE DES 10 MODULES
 
 | # | Jeu | Mode(s) | Mécanique adaptative |
 |---|-----|---------|------------------------|
@@ -96,7 +39,7 @@ Chaque jeu de la plateforme intègre :
 
 ---
 
-## 5. RELEVÉ ET FORMULES DES STATISTIQUES (LOGIQUE JS)
+## 4. RELEVÉ ET FORMULES DES STATISTIQUES (LOGIQUE JS)
 
 Chaque module stocke son historique de scores dans le `localStorage` :
 * `scores-history-<nom-du-jeu>` : liste de toutes les fins de partie, ex. `[120, 250, 400]`.
@@ -106,7 +49,7 @@ Chaque module stocke son historique de scores dans le `localStorage` :
 
 ---
 
-## 6. LANCER LE PROJET
+## 5. LANCER LE PROJET
 
 Aucune dépendance, aucun build : ouvrir `index.html` dans un navigateur suffit.
 
