@@ -10,6 +10,7 @@ Hub d'arcade rétro-futuriste — 10 jeux classiques réémulés en HTML5, CSS3 
 
 ---
 
+<<<<<<< HEAD
 ## 2. ARBORESCENCE DU PROJET
 
 📁 retroforge/
@@ -83,6 +84,9 @@ Hub d'arcade rétro-futuriste — 10 jeux classiques réémulés en HTML5, CSS3 
 ---
 
 ## 3. FONCTIONNALITÉS STANDARDISÉES
+=======
+## 2. FONCTIONNALITÉS STANDARDISÉES
+>>>>>>> a94958d1a40a7c94768a32c8ba362c24dedba0f5
 
 Chaque jeu de la plateforme intègre :
 * **Contrôles universels :** Flèches directionnelles OU touches clavier (`Z, Q, S, D` / `W, A, S, D`), plus un D-Pad tactile sur mobile.
@@ -93,7 +97,7 @@ Chaque jeu de la plateforme intègre :
 
 ---
 
-## 4. LISTE DES 10 MODULES
+## 3. LISTE DES 10 MODULES
 
 | # | Jeu | Mode(s) | Mécanique adaptative |
 |---|-----|---------|------------------------|
@@ -115,7 +119,7 @@ Chaque jeu de la plateforme intègre :
 
 ---
 
-## 5. RELEVÉ ET FORMULES DES STATISTIQUES (LOGIQUE JS)
+## 4. RELEVÉ ET FORMULES DES STATISTIQUES (LOGIQUE JS)
 
 Chaque module stocke son historique de scores dans le `localStorage` :
 * `scores-history-<nom-du-jeu>` : liste de toutes les fins de partie, ex. `[120, 250, 400]`.
@@ -125,7 +129,7 @@ Chaque module stocke son historique de scores dans le `localStorage` :
 
 ---
 
-## 6. LANCER LE PROJET
+## 5. LANCER LE PROJET
 
 Aucune dépendance, aucun build : ouvrir `index.html` dans un navigateur suffit.
 
