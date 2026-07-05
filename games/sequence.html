@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Cyber Sequence — RetroForge</title>
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/modules/sequence.css">
+</head>
+<body class="crt-flicker">
+  <div class="crt-overlay"></div>
+  <div class="game-screen">
+    <div class="game-topbar">
+      <a class="back" href="../index.html">&larr; Retour au hall</a>
+      <span class="game-title">CYBER SEQUENCE</span>
+      <span></span>
+    </div>
+    <div class="hud">
+      <span>NIVEAU : <b id="hudScore">0</b></span>
+      <span>RECORD : <b id="hudBest">0</b></span>
+      <span>MOYENNE : <b id="hudAvg">0</b></span>
+      <span>TEMPS : <b id="hudTime">0:00</b></span>
+    </div>
+    <div class="canvas-wrap">
+      <div class="seq-grid">
+        <button class="seq-pad up" data-pad="0" aria-label="Haut"></button>
+        <button class="seq-pad left" data-pad="1" aria-label="Gauche"></button>
+        <button class="seq-pad right" data-pad="2" aria-label="Droite"></button>
+        <button class="seq-pad down" data-pad="3" aria-label="Bas"></button>
+      </div>
+      <div class="overlay-msg" id="overlay">
+        <h2 id="overlayTitle">CYBER SEQUENCE</h2>
+        <p id="overlayMsg">Regarde puis reproduis la sequence</p>
+      </div>
+    </div>
+    <div class="game-options">
+      <span>Controles : ZQSD / fleches ou clic sur les pads — la vitesse augmente avec le niveau</span>
+    </div>
+  </div>
+
+  <script src="../js/hub.js"></script>
+  <script>window.RETROFORGE_ASSET_BASE = "../assets/";</script>
+  <script src="../js/playlist.js"></script>
+  <script src="../js/engines/sequence.js"></script>
+</body>
+</html>

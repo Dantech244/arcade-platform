@@ -1,0 +1,19 @@
+.game-screen { max-width: 640px; margin: 0 auto; padding: 18px 20px 60px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.game-topbar { width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.game-topbar a.back { font-family: var(--font-mono); color: var(--text-muted); text-decoration: none; font-size: 14px; letter-spacing: 1px; }
+.game-topbar a.back:hover { color: var(--cyan); }
+.game-title { font-family: var(--font-display); font-size: 14px; letter-spacing: 1px; color: var(--text-main); text-shadow: 0 0 6px var(--cyan); }
+.hud { width: 100%; display: flex; flex-wrap: wrap; gap: 14px; font-family: var(--font-mono); font-size: 14px; color: var(--text-muted); justify-content: center; }
+.hud b { color: var(--cyan); font-weight: normal; }
+#gameCanvas { background: var(--bg-screen); border: 1px solid var(--cyan-dim); border-radius: 4px; box-shadow: 0 0 30px -8px var(--cyan-dim); max-width: 100%; touch-action: none; cursor: pointer; }
+.game-options { width: 100%; max-width: 480px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: center; font-family: var(--font-mono); font-size: 13px; color: var(--text-muted); }
+.game-options select { background: var(--bg-screen); border: 1px solid #2a2340; color: var(--text-main); font-family: var(--font-mono); padding: 5px 8px; border-radius: 3px; }
+.canvas-wrap { position: relative; display: inline-block; max-width: 100%; }
+.overlay-msg { position: absolute; inset: 0; background: rgba(7, 6, 13, 0.9); display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; border-radius: 4px; padding: 20px; }
+.overlay-msg.show { display: flex; }
+.overlay-msg h2 { font-family: var(--font-display); font-size: 18px; color: var(--magenta); text-shadow: 0 0 10px var(--magenta); margin: 0; }
+.overlay-msg p { font-family: var(--font-mono); color: var(--text-muted); margin: 0; max-width: 320px; }
+
+@media (max-width: 560px) {
+  .game-screen { padding-top: 64px; }
+}

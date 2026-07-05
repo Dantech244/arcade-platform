@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Cyber Moles — RetroForge</title>
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/modules/moles.css">
+</head>
+<body class="crt-flicker">
+  <div class="crt-overlay"></div>
+  <div class="game-screen">
+    <div class="game-topbar">
+      <a class="back" href="../index.html">&larr; Retour au hall</a>
+      <span class="game-title">CYBER MOLES</span>
+      <span></span>
+    </div>
+    <div class="hud">
+      <span>SCORE : <b id="hudScore">0</b></span>
+      <span>RECORD : <b id="hudBest">0</b></span>
+      <span>MOYENNE : <b id="hudAvg">0</b></span>
+      <span>TEMPS : <b id="hudTime">0:45</b></span>
+    </div>
+    <div class="canvas-wrap">
+      <div id="molesBoard"></div>
+      <div class="overlay-msg" id="overlay">
+        <h2 id="overlayTitle">CYBER MOLES</h2>
+        <p id="overlayMsg">45 secondes pour taper un maximum de taupes</p>
+      </div>
+    </div>
+    <div class="game-options">
+      <span>Clic / tap sur les taupes des qu'elles sortent — ca s'accelere avec ton score</span>
+    </div>
+  </div>
+
+  <script src="../js/hub.js"></script>
+  <script>window.RETROFORGE_ASSET_BASE = "../assets/";</script>
+  <script src="../js/playlist.js"></script>
+  <script src="../js/engines/moles.js"></script>
+</body>
+</html>

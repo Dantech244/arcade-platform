@@ -1,4 +1,4 @@
-# RetroForge 🕹️
+# RetroForge 
 
 Hub d'arcade rétro-futuriste — 10 jeux classiques réémulés en HTML5, CSS3 et JavaScript Vanille, jouables directement dans le navigateur.
 
@@ -7,7 +7,6 @@ Hub d'arcade rétro-futuriste — 10 jeux classiques réémulés en HTML5, CSS3 
 ## 1. OBJECTIFS DU PROJET
 * **But principal :** Créer un hub centralisé de jeux vidéo rétro émulés nativement en HTML5, CSS3 et JavaScript Vanille.
 * **Thématique visuelle :** Ambiance borne d'arcade rétro-futuriste, interface sombre avec des touches lumineuses néon (Cyan et Rose), overlay CRT et scanlines.
-* **Objectif Hack Club :** Valider entre 80 et 100 heures de code d'ici le 29 août pour débloquer le Flipper Zero et la Pinetime.
 
 ---
 
@@ -23,7 +22,7 @@ Hub d'arcade rétro-futuriste — 10 jeux classiques réémulés en HTML5, CSS3 
 │   └── 📁 music/                  <-- Playlist : music1.mp3, music2.mp3, ... (detection auto)
 │       └── 📄 README.txt
 │
-├── 📁 games/                      <-- Les 10 pages de jeu
+├── 📁 games/                      <-- Les 15 pages de jeu
 │   ├── 📄 snake.html
 │   ├── 📄 tetris.html
 │   ├── 📄 pong.html
@@ -33,7 +32,12 @@ Hub d'arcade rétro-futuriste — 10 jeux classiques réémulés en HTML5, CSS3 
 │   ├── 📄 space-invaders.html
 │   ├── 📄 frogger.html
 │   ├── 📄 flappy.html
-│   └── 📄 asteroides.html
+│   ├── 📄 asteroides.html
+│   ├── 📄 2048.html
+│   ├── 📄 memory.html
+│   ├── 📄 sequence.html
+│   ├── 📄 moles.html
+│   └── 📄 connect4.html
 │
 ├── 📁 css/
 │   ├── 📄 global.css              <-- Design tokens, hub, modale de config, lecteur musical
@@ -48,7 +52,12 @@ Hub d'arcade rétro-futuriste — 10 jeux classiques réémulés en HTML5, CSS3 
 │       ├── 📄 space-invaders.css
 │       ├── 📄 frogger.css
 │       ├── 📄 flappy.css
-│       └── 📄 asteroides.css
+│       ├── 📄 asteroides.css
+│       ├── 📄 2048.css
+│       ├── 📄 memory.css
+│       ├── 📄 sequence.css
+│       ├── 📄 moles.css
+│       └── 📄 connect4.css
 │
 └── 📁 js/
     ├── 📄 hub.js                  <-- Gestionnaire de la modale, thèmes et scores globaux
@@ -64,7 +73,12 @@ Hub d'arcade rétro-futuriste — 10 jeux classiques réémulés en HTML5, CSS3 
         ├── 📄 space-invaders.js
         ├── 📄 frogger.js
         ├── 📄 flappy.js
-        └── 📄 asteroides.js
+        ├── 📄 asteroides.js
+        ├── 📄 2048.js
+        ├── 📄 memory.js
+        ├── 📄 sequence.js
+        ├── 📄 moles.js
+        └── 📄 connect4.js
 
 ---
 
@@ -93,6 +107,11 @@ Chaque jeu de la plateforme intègre :
 | 08 | Frogger Crossing | Solo | Circulation qui s'accélère à chaque traversée |
 | 09 | Flappy Signal | Solo | Tubes resserrés progressivement |
 | 10 | Astéroïdes Drift | Solo | Vagues plus rapides, astéroïdes qui se scindent |
+| 11 | 2048 | Solo | Puzzle de fusion de tuiles, classique |
+| 12 | Cyber Memory | Solo | Paires de cartes, 3 niveaux de difficulté |
+| 13 | Cyber Sequence | Solo | Simon-like, la vitesse augmente à chaque niveau |
+| 14 | Cyber Moles | Solo | Chrono 45s, taupes plus rapides avec le score |
+| 15 | Puissance 4 | Solo vs IA / 2 joueurs | IA qui bloque/gagne, ou 2 joueurs en local |
 
 ---
 

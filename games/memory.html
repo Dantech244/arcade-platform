@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Cyber Memory — RetroForge</title>
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/modules/memory.css">
+</head>
+<body class="crt-flicker">
+  <div class="crt-overlay"></div>
+  <div class="game-screen">
+    <div class="game-topbar">
+      <a class="back" href="../index.html">&larr; Retour au hall</a>
+      <span class="game-title">CYBER MEMORY</span>
+      <span></span>
+    </div>
+    <div class="hud">
+      <span>COUPS : <b id="hudMoves">0</b></span>
+      <span>RECORD : <b id="hudBest">0</b></span>
+      <span>MOYENNE : <b id="hudAvg">0</b></span>
+      <span>TEMPS : <b id="hudTime">0:00</b></span>
+    </div>
+    <div class="canvas-wrap">
+      <div id="memoryBoard"></div>
+      <div class="overlay-msg" id="overlay">
+        <h2 id="overlayTitle">CYBER MEMORY</h2>
+        <p id="overlayMsg">Choisis ta difficulte puis appuie pour demarrer</p>
+      </div>
+    </div>
+    <div class="game-options">
+      <label>Difficulte :
+        <select id="sizeSelect">
+          <option value="8">Facile (8 paires)</option>
+          <option value="12" selected>Moyen (12 paires)</option>
+          <option value="16">Difficile (16 paires)</option>
+        </select>
+      </label>
+      <button class="btn-inline" id="newGameBtn">Nouvelle partie</button>
+    </div>
+  </div>
+
+  <script src="../js/hub.js"></script>
+  <script>window.RETROFORGE_ASSET_BASE = "../assets/";</script>
+  <script src="../js/playlist.js"></script>
+  <script src="../js/engines/memory.js"></script>
+</body>
+</html>
